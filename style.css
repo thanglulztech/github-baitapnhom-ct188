@@ -11,7 +11,11 @@
 
 
 header {
-    background: url(Assets/img/header_background.jpg);
+    width: 100%;
+    display: inline-block;
+    background: #5f00ba;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 #logo {
@@ -19,12 +23,17 @@ header {
     width: 150px;
     border-radius: 15px;
 }
+
+#logo:hover {
+    cursor: pointer;
+}
+
 header li {
     display: inline-block;
 }
 
 header a {
-    background-color: #d6ff79;
+    background-color: #fff2f1;
     margin: 0 8px;
     padding: 8px;
     border: 1px solid #000;
@@ -34,4 +43,49 @@ header a {
 header a:hover {
     background-color: #000;
     color: #fff;
+}
+
+#searchBox {
+    position: relative;
+    float: right;
+    bottom: 20px;
+    margin-right: 12px;
+}
+
+#searchBox button,
+#searchBox input{
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+}
+
+#searchBox button:hover{
+    cursor: pointer;
+    color: #fff2f1;
+    background-color: #000;
+}
+
+footer {
+    background-color: #5f00ba;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+}
+
+#top {
+    position: fixed;
+    z-index: 99;
+    bottom: 24px;
+    right: 24px;
+    background-color: #333;
+    color: #fff2f1;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+footer p {
+    text-transform: uppercase;
+    color: #fff2f1;
+    text-align: center;
+    line-height: 24px;
+    margin: auto;
 }
