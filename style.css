@@ -4,10 +4,10 @@
     margin: 0;
 }
 
-/* Màu chính #ffffff */
-/* Màu phụ #000000 */
-/* Màu tham khảo: màu tối #a09be7 và #5F00BA*/
-/* Màu tham khảo: màu sáng #fff2f1 và #d6ff79 */
+/* Màu chính #fff2f1 */
+/* Màu phụ #333333 */
+/* Màu tham khảo: màu tối #5f00ba */
+/* Màu tham khảo: màu sáng #a09be7*/
 
 
 header {
@@ -24,10 +24,11 @@ header li {
 }
 
 header a {
-    background-color: #fff2f1;
+    background-color: #d6ff79;
     margin: 0 8px;
-    padding: 4px;
+    padding: 8px;
     border: 1px solid #000;
+    border-radius: 5px;
 }
 
 header a:hover {
