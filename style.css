@@ -6,4 +6,31 @@
 
 /* Màu chính #ffffff */
 /* Màu phụ #fff2f1 */
-/* Màu tham khảo #a09be7 và #5F00BA*/
+/* Màu tham khảo: màu tối #5F00BA*/
+/* Màu tham khảo: màu sáng #fff2f1 */
+
+
+header {
+    background: url(Assets/img/header_background.jpg);
+}
+
+#logo {
+    margin: 12px;
+    width: 150px;
+    border-radius: 15px;
+}
+header li {
+    display: inline-block;
+}
+
+header a {
+    background-color: #fff2f1;
+    margin: 0 8px;
+    padding: 4px;
+    border: 1px solid #000;
+}
+
+header a:hover {
+    background-color: #000;
+    color: #fff;
+}
