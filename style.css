@@ -2,6 +2,13 @@
     text-decoration: none;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 8px 0;
 }
 
 /* Màu chính #fff2f1 */
@@ -13,7 +20,11 @@
 header {
     width: 100%;
     display: inline-block;
-    background: #5f00ba;
+    background: url(./Assets/img/header_background.jpg);
+    background-color: #333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -50,6 +61,8 @@ header a:hover {
     float: right;
     bottom: 20px;
     margin-right: 12px;
+    background-color: #333;
+    padding: 8px;
 }
 
 #searchBox button,
@@ -65,8 +78,46 @@ header a:hover {
     background-color: #000;
 }
 
+#cartTable,
+#cartTable td,
+#cartTable tr {
+    text-align: center;
+    border: 1px solid #000;
+}
+
+
+#cartTable {
+    border: solid 5px #5f00ba;
+    margin: 16px auto;
+}
+
+#cartTable td {
+    min-width: 200px;
+    padding: 4px;
+}
+
+#cartTable img {
+    width: 100px;
+}
+
+.cancelBtn {
+    padding: 8px 20px;
+    background-color: #fff2f1;
+    color: #333;
+    border: solid 1px #333;
+    border-radius: 5px;
+}
+
+.cancelBtn:hover {
+    background-color: #333;
+    color: #fff2f1;
+    cursor: pointer;
+}
+
 footer {
-    background-color: #5f00ba;
+    width: 100%;
+    background: url(./Assets/img/header_background.jpg);
+    background-attachment: fixed;
     border-top-left-radius: 15px;
     border-top-right-radius: 5px;
 }
