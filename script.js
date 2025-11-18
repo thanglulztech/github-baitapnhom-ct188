@@ -2,6 +2,18 @@
 
 // San pham
 // - Tạo chức năng thêm sản phẩm vào giỏ hàng, kiểm tra bằng localStorage.getItem()
+var itemList = {
+    "sp001" : {
+        "name": "",
+        "price": "",
+        "photo" : "./Assets/img/sanpham/"
+        },
+    "sp002" : {
+        "name": "",
+        "price": "",
+        "photo" : "./Assets/img/sanpham/"
+        },
+    }
 
 // Dang nhap
 // - Đăng nhập bằng thông tin lưu trữ ở local storage
@@ -16,3 +28,96 @@
 // https://www.w3schools.com/howto/howto_js_slideshow.asp
 
 // Gio hang
+
+
+
+
+function createCartData(){
+    localStorage.setItem("sp001", 3)
+    localStorage.setItem("sp002", 5)
+    localStorage.setItem("sp003", 0)
+}
+
+
+
+function displayCart(){
+    var currentCart ={}
+
+    for (item of Object.keys(itemList)){
+        if (localStorage.getItem(item)) {
+            currentCart[item] = itemList[item]
+            currentCart[item].amount = localStorage.getItem(item)
+            currentCart[item].code = item
+        }
+    }
+
+    let priceSum = 0
+    for (item in currentCart){
+
+        let name = document.createElement('td')
+        name.textContent = currentCart[item].name
+        
+        let amount = document.createElement('td')
+        amount.textContent = currentCart[item].amount
+
+        let price = document.createElement('td')
+        price.textContent = currentCart[item].price
+
+        let photo = document.createElement('td')
+        photo.innerHTML = "<img src='"+ currentCart[item].photo+"'/>"
+        
+        let total = document.createElement('td')
+        total.innerHTML = currentCart[item].amount * currentCart[item].price
+        priceSum+= (currentCart[item].amount * currentCart[item].price)
+        
+        let btn = document.createElement('button')
+        btn.className='cancelBtn'
+        btn.id = currentCart[item].code
+        btn.innerHTML = "Hủy"
+        
+        
+        let btnSlot = document.createElement('td')
+        btnSlot.appendChild(btn)
+
+        let currentRow = document.createElement('tr')
+        currentRow.id = currentCart[item].code
+        currentRow.appendChild(name)
+        currentRow.appendChild(amount)
+        currentRow.appendChild(price)
+        currentRow.appendChild(photo)
+        currentRow.appendChild(total)
+        currentRow.appendChild(btnSlot)
+
+        const tbody = document.getElementsByTagName('tbody')[0]
+        tbody.appendChild(currentRow)        
+        
+
+    }
+    // Hien thi thong tin Tfoot
+    const sum = document.getElementById('productSum')
+    sum.textContent = priceSum
+
+    let tax = 0.1 * priceSum
+    const taxCell = document.getElementById('tax')
+    
+    taxCell.textContent = tax
+
+    const final = document.getElementById("Total")
+    final.textContent = (priceSum + tax)
+
+}
+
+const cartTable = document.getElementById('cartTable')
+if (cartTable) displayCart()
+
+
+const removeBtns = document.getElementsByClassName('cancelBtn')
+for (let btn of removeBtns){
+    btn.addEventListener('click',()=> {
+            if (btn.id && localStorage.getItem(btn.id)){
+                localStorage.removeItem(btn.id)
+                location.reload()
+            }
+        })
+};
+// createCartData()

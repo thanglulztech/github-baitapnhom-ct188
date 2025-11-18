@@ -31,37 +31,34 @@
 <main>
     <h1>đơn hàng của bạn</h1>
 <table id="cartTable">
-    <tr id="cartTitle">
+    <thead id="cartTitle">
         <td>Tên</td>
         <td>Hình ảnh</td>
         <td>Đơn giá</td>
         <td>Số lượng</td>
         <td>Tổng giá</td>
         <td>Tùy chọn</td>
-    </tr>
-    <tr>
-        <td>Tên</td>
-        <td><img src="./Assets/img/sanpham/" alt=""></td>
-        <td>Đơn giá</td>
-        <td>Số lượng</td>
-        <td>Tổng giá</td>
-        <td><button class="cancelBtn">Hủy</button></td>
-    </tr>
-    <tr>
-        <td colspan="6"></td>
-    </tr>
-    <tr>
-        <td colspan="5">Tổng tiền hàng</td>
-        <td id="productSum">Tổng tiền hàng</td>
-    </tr>
-    <tr>
-        <td colspan="5">Chiết khấu</td>
-        <td id="discount">Chiết khấu</td>
-    </tr>
-    <tr>
-        <td colspan="5">Tổng thanh toán</td>
-        <td id="Total">Tổng thanh toán</td>
-    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6"></td>
+        </tr>
+        <tr>
+            <td colspan="5">Tổng tiền hàng</td>
+            <td id="productSum">Tổng tiền hàng</td>
+        </tr>
+        <tr>
+            <td colspan="5">Thuế</td>
+            <td id="tax">Thuế</td>
+        </tr>
+        <tr>
+            <td colspan="5">Tổng thanh toán</td>
+            <td id="Total">Tổng thanh toán</td>
+        </tr>
+    </tfoot>
 
 </table>
 </main>
@@ -70,4 +67,5 @@
     <a id="top" href="#">Về đầu trang</a>
 </footer>
 </body>
+<script src="./script.js"></script>
 </html>
