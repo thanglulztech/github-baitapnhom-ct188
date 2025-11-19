@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
-    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Đăng Nhập</title>
 </head>
 <body>
     <header>
@@ -23,53 +26,55 @@
         </nav>
         <section id="searchBox">
             <input type="text" name="" id="searchInput">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i></button>
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>Nut tim kiem</button>
+            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i>Nut gio hang</button>
         </section>
     </header>
 <main>
+    <section class="secForm">
+        
+        <div class="wrapper">
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#" method="post" enctype="multipart/form-data" id="loginF">
 
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-circle-user"></i></span>
+                        <input type="text" name="username" placeholder="Enter Your Username"  required id="username">
+                        <label for="username"></label>
+                    </div>
+
+
+                    <div class="input-box">
+                        <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                        <input type="password" name="psw" placeholder="Enter Password" minlength="8" required id="psw">
+                        <label for="password"></label>
+                    </div>
+                    
+
+                    <button type="submit" class="button">Login</button>
+
+                    <div class="remember-me">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <div class="signup-link">
+                        <p>Dont have an account?<a href="dangky.html"> Sign Up</a></p>
+                    </div>
+
+                    <div id="messageDisplay"></div>
+
+                </form>
+            </div>
+        </div>
+        
+    </section>
 </main>
 <footer>
     <p>Sản phẩm phục vụ đồ án</p>
     <a id="top" href="#">Về đầu trang</a>
 </footer>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
-    <title>Trang chủ</title>
-</head>
-<body>
-    <header>
-        <img src="./Assets/img/header_logo.jpg" alt="" id="logo">
-        <nav>
-        <ul>
-            <li><a href="trangchu.html">Trang chủ</a></li>
-            <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="sanpham.html">Sản phẩm</a></li>
-            <li><a href="giohang.html">Giỏ hàng</a></li>
-            <li><a href="dangnhap.html">Đăng nhập</a></li>
-            <li><a href="dangky.html">Đăng ký</a></li>
-            <li><a href="lienhe.html">Liên hệ</a></li>
-        </ul>
-        </nav>
-        <section id="searchBox">
-            <input type="text" name="" id="searchInput">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i></button>
-        </section>
-    </header>
-<main>
-<!-- Form đăng nhập-->
-</main>
-<footer>
-    <p>Sản phẩm phục vụ đồ án</p>
-    <a id="top" href="#">Về đầu trang</a>
-</footer>
+<script src="script.js"></script>
 </body>
 </html>
