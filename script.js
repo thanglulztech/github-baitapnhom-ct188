@@ -17,9 +17,74 @@ var itemList = {
 
 // Dang nhap
 // - Đăng nhập bằng thông tin lưu trữ ở local storage
+const loginF = document.getElementById("loginF");
+if(loginF){
+    document.getElementById("loginF").addEventListener("submit", function(event){
+        event.preventDefault();
+        const username = document.getElementById("username").value.trim();
+        const psw = document.getElementById("psw").value.trim();
+    
+        const user = localStorage.getItem(username);
+    
+        if(user){
+            const parseUser = JSON.parse(user);
+            if(parseUser.psw === psw){
+                localStorage.setItem("user", JSON.stringify(parseUser));
+                window.location.href = "trangchu.html";
+            }else{
+                alert("Incorrect Password")
+            }
+        }else{
+            alert("User not found");
+        }
+    });
+} 
 
 // Dang ky
 // - Tạo chức năng đăng ký, lưu trữ thông tin đăng nhập ở local storage (key là "name" và "psw"), kiểm tra bằng localStorage.getItem()
+const message = document.getElementById('messageDisplay');
+document.getElementById("signUp").addEventListener("submit", function(event){
+    event.preventDefault();
+    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const psw = document.getElementById("psw").value.trim();
+    const confirmPsw = document.getElementById("confirmPsw").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+
+    if (!strongPasswordRegex.test(psw)) {
+        alert("Password must be strong! Requirements: Minimum 8 characters, At least 1 uppercase letter, 1 lowercase letter, At least 1 number, At least 1 special character (!@#$%^&*...).");
+        return;
+    }
+    if( psw !== confirmPsw){
+        alert("Password do not match");
+        return;
+    }
+    if (username.length < 5) {
+        alert("Login name must be at least 4 characters!");
+        return;
+    }
+
+    const user = {
+        username : username,
+        psw : psw,
+        email : email,
+        phone : phone,
+    };
+    localStorage.setItem(username, JSON.stringify(user));
+    alert("Sign Up Successful!");
+    setTimeout(function() {
+        window.location.href = 'trangchu.html'; 
+    }, 1000);
+
+    document.getElementById('username').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('psw').value = '';
+    document.getElementById('confirmPsw').value = '';
+    document.getElementById('phone').value = '';
+
+});
+
 
 // Lien he
 
