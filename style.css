@@ -140,3 +140,129 @@ footer p {
     line-height: 24px;
     margin: auto;
 }
+/*
+----------------------
+*/
+.secForm{
+    display:flex;
+    height : 600px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background:url('./Assets/img/backgroundsecForm.png') no-repeat;
+    background-size:cover;
+    background-position: center;
+
+}
+.wrapper{
+    position: relative;
+    background: transparent;
+    width: 400px;
+    height: 440px;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    border-radius: 20px;
+    align-items: center;
+    display : flex;
+    justify-content: center;
+    backdrop-filter: blur(15px);
+}
+.wrapper .form-box{
+    width: 100%;
+    padding : 50px;
+}
+.form-box h2{
+    position : relative;
+    text-align: center;
+    color: #5f00ba;
+    font-size: 30px;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: bold;
+}
+.input-box{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size : 15px;
+    padding :0 35px 0 5px;
+}
+
+
+.input-box .icon{
+    position: absolute;
+    right : 9px;
+    top : -10px;
+    font-size: 18px;
+
+}
+.icon i{
+    color: #333;
+    transition: color 0.3s ease;
+}
+.icon:hover i {
+    color : #5f00ba;
+    cursor: pointer;
+}
+.button{
+    position: relative;
+    width:100%;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: #5f00ba;
+    border : none;
+    cursor: pointer;
+    color : rgba(255, 255, 255, 0.99);
+}
+.button:hover{
+    background-color: #9000ff;
+}
+.remember-me{
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-me a{
+    color : #000;
+}
+.remember-me a:hover{
+    text-decoration: underline;
+    color : #5f00ba;
+}
+.signup-link{
+    font-size: 15px;
+    text-align: center;
+    margin: 25px 0 5px;
+}
+.signup-link p a{
+    font-weight: 600;
+    font-size: 14px;
+    color : #000;
+}
+.signup-link p a:hover{
+    text-decoration: underline;
+    color: #5f00ba;
+}
+@media (max-width:420px){
+    .wrapper{
+        width:100%;
+        height:600px;
+        border:none;
+        border-radius: 0;
+    }
+}
+/*
+----------------------
+*/
