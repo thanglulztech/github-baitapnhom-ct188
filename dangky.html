@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
-    <title>Trang chủ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Đăng Ký</title>
 </head>
+
 <body>
     <header>
-        <img src="" alt="" id="logo">
-    <nav>
-        <ul>
-            <li><a href="trangchu.html">Trang chủ</a></li>
-            <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="sanpham.html">Sản phẩm</a></li>
-            <li><a href="giohang.html">Giỏ hàng</a></li>
-            <li><a href="dangnhap.html">Đăng nhập</a></li>
-            <li><a href="dangky.html">Đăng ký</a></li>
-            <li><a href="lienhe.html">Liên hệ</a></li>
-        </ul>
-    </nav>
-    <section id="searchBox">
-        <input type="text" name="" id="">
-        <button>Nut tim kiem</button>
-        <button>Nut gio hang</button>
-    </section>
-</header>
-<main>
-    <!-- Form đăng ký -->
-</main>
-<footer>
-    <p>Sản phẩm phục vụ đồ án</p>
-    <a id="top" href="#">Về đầu trang</a>
-</footer>
+        <img src="./Assets/img/header_logo.jpg" alt="" id="logo">
+        <nav>
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="giohang.html">Giỏ hàng</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <section id="searchBox">
+            <input type="text" name="" id="searchInput">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i>Nut tim kiem</button>
+            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i>Nut gio hang</button>
+        </section>
+    </header>
+    <main>
+        <!-- Form đăng ký -->
+        
+        <section class="secForm">
+            <div class="wrapper">
+                <div class="form-box signup">
+                    <h2>Sign Up</h2>
+                    <form action="#" method="post" enctype="multipart/form-data" id="signUp">
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-circle-user"></i></span>
+                            <input type="text" name="username" placeholder="Enter Your Username"  required id="username">
+                            <label for="username"></label>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-sharp fa-solid fa-envelope"></i></span>
+                            <input type="email" pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.\[a-zA-Z]{2-4}"  name="email" placeholder="Enter email" required id="email">
+                            <label for="email"></label>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" name="psw" placeholder="Enter Password" minlength="8" required id="psw">
+                            <label for="password"></label>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                            <input type="password" name="confirmPsw" placeholder="Enter Confirm Password" minlength="8" required id="confirmPsw">
+                            <label for="password"></label>
+                        </div>
+    
+                        <div class="input-box">
+                            <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                            <input type="phone" id="phone" name="phone" placeholder="Enter 123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="phone">
+                            <label for="phone"></label>
+                        </div>
+    
+                        <button type="submit" class="button">Creat an account</button>
+    
+                        <div id="messageDisplay"></div>
+    
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        
+    </main>
+    <footer>
+        <p>Sản phẩm phục vụ đồ án</p>
+        <a id="top" href="#">Về đầu trang</a>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
