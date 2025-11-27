@@ -4,28 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
     <title>Trang chủ</title>
 </head>
 <body>
-    <header>
-        <img src="./Assets/img/header_logo.jpg" alt="" id="logo">
-        <nav>
-        <ul>
-            <li><a href="trangchu.html">Trang chủ</a></li>
-            <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="sanpham.html">Sản phẩm</a></li>
-            <li><a href="giohang.html">Giỏ hàng</a></li>
-            <li><a href="dangnhap.html">Đăng nhập</a></li>
-            <li><a href="dangky.html">Đăng ký</a></li>
-            <li><a href="lienhe.html">Liên hệ</a></li>
-        </ul>
+<header>
+        <div class="logoContainer">
+            <img src="./Assets/img/header_logo.jpg" alt="">
+            <p class="brand">Cửa hàng điện tử Webby</p>
+        </div>
+        <nav class="large">
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
         </nav>
-        <section id="searchBox">
-            <input type="text" name="" id="searchInput">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i></button>
-        </section>
+    <a id="cartBtn" href="giohang.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
     </header>
 <main>
 <!-- Danh sách sản phẩm chia theo phân loại (máy tính, điện thoại, ...)-->
@@ -33,8 +34,8 @@
 <!-- Hình ảnh của sản phẩm lưu vào assets/img/sanpham -->
 </main>
 <footer>
-    <p>Noi dung footer</p>
-    <button>Nut ve dau trang</button>
+    <p>Sản phẩm phục vụ đồ án</p>
+    <a id="top" href="#">Về đầu trang</a>
 </footer>
 </body>
 </html>

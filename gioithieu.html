@@ -4,36 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
     <title>Trang chủ</title>
 </head>
 <body>
-    <header>
-        <img src="./Assets/img/header_logo.jpg" alt="" id="logo">
-        <nav>
-        <ul>
-            <li><a href="trangchu.html">Trang chủ</a></li>
-            <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="sanpham.html">Sản phẩm</a></li>
-            <li><a href="giohang.html">Giỏ hàng</a></li>
-            <li><a href="dangnhap.html">Đăng nhập</a></li>
-            <li><a href="dangky.html">Đăng ký</a></li>
-            <li><a href="lienhe.html">Liên hệ</a></li>
-        </ul>
+<header>
+        <div class="logoContainer">
+            <img src="./Assets/img/header_logo.jpg" alt="">
+            <p class="brand">Cửa hàng điện tử Webby</p>
+        </div>
+        <nav class="large">
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
         </nav>
-        <section id="searchBox">
-            <input type="text" name="" id="searchInput">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i></button>
-        </section>
+    <a id="cartBtn" href="giohang.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
     </header>
 <main>
-    <!-- Một slide show, có link hướng dẫn ở file script -->
-    <!-- Một cột nội dung chính -->
+    <article>
+        <div id="bannerContainer">
+            <a id="prev">&#10094;</a>
+           <img id="b1" class="bannerItem" src="./Assets/img/banner/banner1.jpg" alt="">
+           <img id="b2" class="bannerItem fade" src="./Assets/img/banner/banner2.jpg" alt="">
+           <img id="b3" class="bannerItem fade" src="./Assets/img/banner/banner3.jpg" alt="">
+           <img id="b4" class="bannerItem fade" src="./Assets/img/banner/banner4.jpg" alt="">
+           <img id="b5" class="bannerItem fade" src="./Assets/img/banner/banner5.jpg" alt="">
+           <a id="next">&#10095;</a>
+        </div>
+    </article>
+    <article>
+
+        <p class="intro">Cửa hàng Webby là điểm đến đáng tin cậy dành cho những ai yêu công nghệ và đang tìm kiếm các thiết bị điện tử chất lượng cao. Tại Webby, bạn sẽ dễ dàng lựa chọn từ nhiều sản phẩm như laptop, điện thoại, máy tính bảng đến linh kiện và phụ kiện chuyên dụng. Tất cả đều được chọn lọc kỹ lưỡng từ những thương hiệu uy tín, đảm bảo chất lượng sản phẩm tốt nhất và độ tin cậy cao.
+            <br>
+            <br>
+            Webby luôn đặt khách hàng làm trọng tâm. Đội ngũ tư vấn giàu kinh nghiệm, thân thiện và am hiểu kỹ thuật sẵn sàng hỗ trợ để bạn tìm được thiết bị phù hợp nhất. Cùng với đó, cửa hàng cam kết mang lại trải nghiệm khách hàng tuyệt vời nhất, từ khâu tư vấn, mua sắm cho đến dịch vụ hậu mãi.
+            <br>
+            <br>
+    Đặc biệt, Webby đem đến mức giá vô cùng hợp lý, giúp bạn dễ dàng sở hữu sản phẩm mong muốn mà vẫn tối ưu chi phí.
+    <br>
+    <br>
+    Dù bạn là người dùng phổ thông hay tín đồ công nghệ, Webby luôn sẵn sàng đồng hành để bạn tìm được thiết bị chất lượng, bền bỉ và đáng giá nhất. Ghé ngay Webby để cảm nhận sự khác biệt!</p>
+    </article>
+    <article>
+        <a href="/sanpham.html" class="Btn">Đến mua sắm ngay</a>
+    </article>
 </main>
 <footer>
     <p>Sản phẩm phục vụ đồ án</p>
     <a id="top" href="#">Về đầu trang</a>
 </footer>
+<script src="./script.js"></script>
 </body>
 </html>

@@ -4,14 +4,14 @@
 // - Tạo chức năng thêm sản phẩm vào giỏ hàng, kiểm tra bằng localStorage.getItem()
 var itemList = {
     "sp001" : {
-        "name": "",
-        "price": "",
-        "photo" : "./Assets/img/sanpham/"
+        "name": "sp1",
+        "price": "1000",
+        "photo" : "./Assets/img/sanpham/d8aeaef948d01830baae79deb60158c4.jpg"
         },
     "sp002" : {
-        "name": "",
-        "price": "",
-        "photo" : "./Assets/img/sanpham/"
+        "name": "sp2",
+        "price": "2000",
+        "photo" : "./Assets/img/sanpham/fcdfd3373d8f0b84a8d5e61454d946ae.jpg"
         },
     }
 
@@ -43,54 +43,100 @@ if(loginF){
 // Dang ky
 // - Tạo chức năng đăng ký, lưu trữ thông tin đăng nhập ở local storage (key là "name" và "psw"), kiểm tra bằng localStorage.getItem()
 const message = document.getElementById('messageDisplay');
-document.getElementById("signUp").addEventListener("submit", function(event){
-    event.preventDefault();
-    const username = document.getElementById("username").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const psw = document.getElementById("psw").value.trim();
-    const confirmPsw = document.getElementById("confirmPsw").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+const signUppage = document.getElementById("signUp")
+if (signUppage){
 
-    if (!strongPasswordRegex.test(psw)) {
-        alert("Password must be strong! Requirements: Minimum 8 characters, At least 1 uppercase letter, 1 lowercase letter, At least 1 number, At least 1 special character (!@#$%^&*...).");
-        return;
-    }
-    if( psw !== confirmPsw){
-        alert("Password do not match");
-        return;
-    }
-    if (username.length < 5) {
-        alert("Login name must be at least 4 characters!");
-        return;
-    }
-
-    const user = {
-        username : username,
-        psw : psw,
-        email : email,
-        phone : phone,
-    };
-    localStorage.setItem(username, JSON.stringify(user));
-    alert("Sign Up Successful!");
-    setTimeout(function() {
-        window.location.href = 'trangchu.html'; 
-    }, 1000);
-
-    document.getElementById('username').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('psw').value = '';
-    document.getElementById('confirmPsw').value = '';
-    document.getElementById('phone').value = '';
-
-});
+    signUppage.addEventListener("submit", function(event){
+        event.preventDefault();
+        const username = document.getElementById("username").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const psw = document.getElementById("psw").value.trim();
+        const confirmPsw = document.getElementById("confirmPsw").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+    
+        if (!strongPasswordRegex.test(psw)) {
+            alert("Password must be strong! Requirements: Minimum 8 characters, At least 1 uppercase letter, 1 lowercase letter, At least 1 number, At least 1 special character (!@#$%^&*...).");
+            return;
+        }
+        if( psw !== confirmPsw){
+            alert("Password do not match");
+            return;
+        }
+        if (username.length < 5) {
+            alert("Login name must be at least 4 characters!");
+            return;
+        }
+    
+        const user = {
+            username : username,
+            psw : psw,
+            email : email,
+            phone : phone,
+        };
+        localStorage.setItem(username, JSON.stringify(user));
+        alert("Sign Up Successful!");
+        setTimeout(function() {
+            window.location.href = 'trangchu.html'; 
+        }, 1000);
+    
+        document.getElementById('username').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('psw').value = '';
+        document.getElementById('confirmPsw').value = '';
+        document.getElementById('phone').value = '';
+    
+    });
+}
 
 
 // Lien he
 
+const contactForm = document.getElementById('contactForm')
+if (contactForm){
+    contactForm.addEventListener('submit', (e)=> {
+        e.preventDefault()
+        alert('Gui gop y thanh cong')
+    })
+}
+
 // Gioi thieu
-// - Tạo slide show sản phẩm
-// https://www.w3schools.com/howto/howto_js_slideshow.asp
+    const bannerItems = document.getElementsByClassName('bannerItem')
+    var amount = 5
+    var currentBannerIndex = 0
+
+    const prevBtn = document.getElementById('prev')
+    const nextBtn = document.getElementById('next')
+    if (prevBtn && nextBtn){
+
+        prevBtn.addEventListener('click', (e)=> {
+            // Ẩn item hiện tại
+            var currentBannerItem = bannerItems[currentBannerIndex]
+            currentBannerItem.classList.add('fade')
+            
+            // Hiện item kế tiếp
+            currentBannerIndex = currentBannerIndex-1
+            if (currentBannerIndex < 0) currentBannerIndex = amount-1
+            currentBannerItem = bannerItems[currentBannerIndex]
+            currentBannerItem.classList.remove('fade')
+    
+        })
+        
+        nextBtn.addEventListener('click', (e)=> {
+                // Ẩn item hiện tại
+                var currentBannerItem = bannerItems[currentBannerIndex]
+                currentBannerItem.classList.add('fade')
+                
+                // Hiện item kế tiếp
+                currentBannerIndex = currentBannerIndex+1
+                if (currentBannerIndex >= amount) currentBannerIndex = 0
+                
+                currentBannerItem = bannerItems[currentBannerIndex]
+                currentBannerItem.classList.remove('fade')
+            })
+
+    }
+    
 
 // Gio hang
 
@@ -115,6 +161,7 @@ function displayCart(){
             currentCart[item].code = item
         }
     }
+    
 
     let priceSum = 0
     for (item in currentCart){
@@ -122,12 +169,14 @@ function displayCart(){
         let name = document.createElement('td')
         name.textContent = currentCart[item].name
         
+        
         let amount = document.createElement('td')
         amount.textContent = currentCart[item].amount
-
+        
+        
         let price = document.createElement('td')
         price.textContent = currentCart[item].price
-
+        
         let photo = document.createElement('td')
         photo.innerHTML = "<img src='"+ currentCart[item].photo+"'/>"
         
@@ -147,9 +196,9 @@ function displayCart(){
         let currentRow = document.createElement('tr')
         currentRow.id = currentCart[item].code
         currentRow.appendChild(name)
-        currentRow.appendChild(amount)
-        currentRow.appendChild(price)
         currentRow.appendChild(photo)
+        currentRow.appendChild(price)
+        currentRow.appendChild(amount)
         currentRow.appendChild(total)
         currentRow.appendChild(btnSlot)
 
@@ -161,14 +210,6 @@ function displayCart(){
     // Hien thi thong tin Tfoot
     const sum = document.getElementById('productSum')
     sum.textContent = priceSum
-
-    let tax = 0.1 * priceSum
-    const taxCell = document.getElementById('tax')
-    
-    taxCell.textContent = tax
-
-    const final = document.getElementById("Total")
-    final.textContent = (priceSum + tax)
 
 }
 
@@ -185,4 +226,11 @@ for (let btn of removeBtns){
             }
         })
 };
+
+const Paybtn = document.getElementById('payBtn')
+if (Paybtn) {
+    Paybtn.addEventListener('click', (e)=> {
+        alert('Thanh toan thanh cong')
+    })
+}
 // createCartData()

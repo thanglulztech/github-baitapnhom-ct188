@@ -4,35 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./Assets/img/logo.jpg" type="image/x-icon">
     <title>Trang chủ</title>
 </head>
 <body>
-    <header>
-        <img src="./Assets/img/header_logo.jpg" alt="" id="logo">
-        <nav>
-        <ul>
-            <li><a href="trangchu.html">Trang chủ</a></li>
-            <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="sanpham.html">Sản phẩm</a></li>
-            <li><a href="giohang.html">Giỏ hàng</a></li>
-            <li><a href="dangnhap.html">Đăng nhập</a></li>
-            <li><a href="dangky.html">Đăng ký</a></li>
-            <li><a href="lienhe.html">Liên hệ</a></li>
-        </ul>
+<header>
+        <div class="logoContainer">
+            <img src="./Assets/img/header_logo.jpg" alt="">
+            <p class="brand">Cửa hàng điện tử Webby</p>
+        </div>
+        <nav class="large">
+            <ul>
+                <li><a href="trangchu.html">Trang chủ</a></li>
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li><a href="sanpham.html">Sản phẩm</a></li>
+                <li><a href="dangnhap.html">Đăng nhập</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
         </nav>
-        <section id="searchBox">
-            <input type="text" name="" id="searchInput">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <button id="cartBtn"><i class="fa-solid fa-shopping-cart"></i></button>
-        </section>
+    <a id="cartBtn" href="giohang.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
     </header>
-<main>
-<!-- Một cột nội dung chính, hai thẻ aside hai bên chứa hình ảnh quảng cáo -->
-</main>
+    <main class="col-2">
+        <article class="branch">
+            <h2>Chi nhánh Webby</h2>
+            <section class="branchContent">
+                <div class="branchItem">
+                    <h3>Chi nhánh 1:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Ninh Kiều, Cần Thơ</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 2:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Sóc Trăng, Cần Thơ</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 3:</h3>
+                    <p>Địa chỉ: 123 đường ABC, xã Bình Hưng, Thành phố Hồ Chí Minh</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 4:</h3>
+                    <p>Địa chỉ: 123 đường ABC, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 5:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Hà Đông, Hà Nội</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 6:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Ba Đình, Hà Nội</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 7:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Sơn Trà, Đà Nẵng</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+                <div class="branchItem">
+                    <h3>Chi nhánh 8:</h3>
+                    <p>Địa chỉ: 123 đường ABC, phường Hội An, Đà Nẵng</p>
+                    <p>Giờ hoạt động: 7:00 - 20:00</p>
+                </div>
+
+            </section>
+        </article>
+        <article class="online">
+            <h2>Chăm sóc khách hàng trực tuyến</h2>
+            <section class="onlineContent">
+                <section class="text">
+                    <h2>Hotline: 123456789</h2>
+                    <h2>Hoặc gửi góp ý:</h2>
+                </section>
+                <section class="secForm">
+                    <div class="wrapper">
+                        <div class="form-box contact">
+                            <form action="#" method="post" enctype="multipart/form-data" id="contactForm">
+                                <h2>Góp ý</h2>
+                                <div class="input-box">
+                                    <input type="text" name="content" placeholder="Nội dung góp ý" required id="content">
+                                </div>
+                                <label for="file">Hình ảnh bổ sung:</label>
+                                <div class="input-box">
+                                    <input type="file" name="file" accept=".jpg, .jpeg, .png" id="file">
+                                </div>
+                                <button type="submit" class="button">Gửi</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </article>
+    </main>
 <footer>
     <p>Sản phẩm phục vụ đồ án</p>
     <a id="top" href="#">Về đầu trang</a>
 </footer>
+<script src="./script.js"></script>
 </body>
 </html>
