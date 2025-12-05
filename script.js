@@ -3,17 +3,63 @@
 // San pham
 // - Tạo chức năng thêm sản phẩm vào giỏ hàng, kiểm tra bằng localStorage.getItem()
 var itemList = {
-    "sp001" : {
-        "name": "sp1",
-        "price": "1000",
-        "photo" : "./Assets/img/sanpham/d8aeaef948d01830baae79deb60158c4.jpg"
-        },
-    "sp002" : {
-        "name": "sp2",
-        "price": "2000",
-        "photo" : "./Assets/img/sanpham/fcdfd3373d8f0b84a8d5e61454d946ae.jpg"
-        },
+    "s25ultra": {
+        "name": "Samsung Galaxy S25 Ultra 12GB 256GB",
+        "price": "27590000",
+        "photo": "./Assets/img/sanpham/25.jpg"
+    },
+    "n13pro": {
+        "name": "Xiaomi Redmi Note 13 Pro 5G 8GB 256GB",
+        "price": "6990000",
+        "photo": "./Assets/img/sanpham/n13.jpg"
+    },
+    "17pro": {
+        "name": "iPhone 17 Pro 256GB",
+        "price": "37990000",
+        "photo": "./Assets/img/sanpham/17p1.jpg"
+    },
+    "s10fe": {
+        "name": "Samsung Galaxy Tab S10 FE Wifi 12GB 256GB",
+        "price": "12740000",
+        "photo": "./Assets/img/sanpham/10.jpg"
+    },
+    "pad2": {
+        "name": "Xiaomi Redmi Pad 2 WiFi 6GB 128GB",
+        "price": "5390000",
+        "photo": "./Assets/img/sanpham/pad2.jpg"
+    },
+    "m3": {
+        "name": "iPad Air 11 inch M3 Wifi 128GB 2025",
+        "price": "16190000",
+        "photo": "./Assets/img/sanpham/m3.jpg"
     }
+}
+const CART_KEY = 'shoppingCart';
+
+function getCart() {
+    var cartJ = localStorage.getItem(CART_KEY);
+    if (cartJ) {
+        return JSON.parse(cartJ);
+    } else {
+        return {};
+    }
+}
+
+function addCart(id) {
+    var cart = getCart();
+    if (cart[id]) {
+        cart[id] = parseInt(cart[id]) + 1;
+    } else {
+        cart[id] = {
+            id: id,
+            name: itemList[id].name,
+            price: itemList[id].price,
+            photo: itemList[id].photo,
+            quantity: 1
+        };
+    }
+    localStorage.setItem(CART_KEY, JSON.stringify(cart));
+}
 
 // Dang nhap
 // - Đăng nhập bằng thông tin lưu trữ ở local storage
