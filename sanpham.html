@@ -26,9 +26,93 @@
                 <li><a href="lienhe.html">Liên hệ</a></li>
             </ul>
         </nav>
+        
+    <form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+        <input name="search" type="search" id="search" placeholder="Nhập nội dung cần tìm..." />
+        <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+        &nbsp;
+    </form>
+    
     <a id="cartBtn" href="giohang.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
     </header>
-<main>
+<main class="one-col">
+    <section class="product-section">
+            
+            <div>
+                <h2>ĐIỆN THOẠI</h2>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/25.jpg" alt="s25ultra">
+                        <h3>Samsung Galaxy S25 Ultra 12GB 256GB</h3>
+                        <p><b>Giá: 27,590,000 VND</b></p>
+                        <p class="mota">
+                            Samsung Galaxy S25 Ultra mạnh mẽ với chip Snapdragon 8 Elite For Galaxy mới nhất, RAM 12GB và bộ nhớ trong 256GB-1TB. Hệ thống 3 camera sau chất lượng gồm camera chính 200MP, camera tele 50MP và camera góc siêu rộng 50MP. Thiết kế kính cường lực Corning Gorilla Armor 2 và khung viền Titanium, màn hình Dynamic AMOLED 6.9 inch. Điện thoại này còn có viên pin 5000mAh, hỗ trợ 5G và Galaxy AI ấn tượng, nâng cao trải nghiệm người dùng!
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('s25ultra')">Thêm vào giỏ hàng</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/n13.jpg" alt="n13p">
+                        <h3>Xiaomi Redmi Note 13 Pro 5G 8GB 256GB</h3>
+                        <p><b>Giá: 6,990,000 VND</b></p>
+                        <p class="mota">
+                            Điện thoại Xiaomi Redmi Note 13 Pro 5G 8GB 256GB tích hợp chip Snapdragon 7s Gen 2 (8 nhân) mạnh mẽ, xử lý tác vụ mượt mà, thúc đẩy hiệu năng toàn diện. Camera chính 200 MP của Note 13 Pro cho phép ghi lại hình ảnh vô cùng sắc nét, mang đến trải nghiệm chụp ảnh chi tiết và sống động. Viên pin lớn 5100 mAh giúp Redmi Note 13 Pro hoạt động bền bỉ suốt cả ngày, giảm thiểu tình trạng sạc nhiều lần.
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('n13pro')">Thêm vào giỏ hàng</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/17.jpg" alt="17p">
+                        <h3>iPhone 17 Pro 256GB</h3>
+                        <p><b>Giá: 37,990,000 VND</b></p>
+                        <p class="mota">
+                            iPhone 17 Pro được Apple trang bị chipset A19 Pro hiện đại, giúp xử lý nhanh hơn và tiết kiệm năng lượng vượt trội trong hầu hết mọi tác vụ. Thiết bị sở hữu màn hình Super Retina XDR 6.3 inch mang lại khả năng hiển thị rực rỡ. Ngoài ra, cụm camera 48MP của máy còn mang đến khả năng chụp, quay chuyên nghiệp.
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('17pro')">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+
+                <h2>MÁY TÍNH BẢNG</h2>
+
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/10.jpg" alt="s10fe">
+                        <h3>Samsung Galaxy Tab S10 FE Wifi 12GB 256GB</h3>
+                        <p><b>Giá: 12,740,000 VND</b></p>
+                        <p class="mota">
+                            Tab S10 FE Wifi 12GB 256GB sở hữu RAM 12GB mạnh mẽ, tích hợp chip Exynos 1580, hỗ trợ đa nhiệm mượt mà, xử lý nhanh chóng mọi ứng dụng và tác vụ nặng. ROM 256GB cung cấp không gian lưu trữ rộng lớn, thoải mái chứa hàng nghìn ảnh, video, tài liệu và ứng dụng. Thiết bị sở hữu màn hình 10.9 inch sắc nét, pin 8000mAh và sạc nhanh 45W tiện lợi.                        
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('s10fe')">Thêm vào giỏ hàng</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/pad2.jpg" alt="pad2">
+                        <h3>Xiaomi Redmi Pad 2 WiFi 6GB 128GB</h3>
+                        <p><b>Giá: 5,390,000 VND</b></p>
+                        <p class="mota">
+                            Máy tính bảng Xiaomi Redmi Pad 2 Wifi sở hữu màn hình 11 inch với độ phân giải 2560 x 1600 pixel, tần số quét 90Hz và cấu hình từ vi xử lý MediaTek Helio G100-Ultra. Máy có RAM 6GB cùng bộ nhớ trong 128GB, pin 9000mAh hỗ trợ sạc nhanh 18W. Redmi Pad2 Wifi có trọng lượng 510g, hỗ trợ Bluetooth 5.3, camera sau 8MP, camera trước 5MP.
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('pad2')">Thêm vào giỏ hàng</button>
+                    </div>
+
+                    <div class="product-item">
+                        <img src="./Assets/img/sanpham/m3.jpg" alt="m3">
+                        <h3>iPad Air 11 inch M3 Wifi 128GB 2025</h3>
+                        <p><b>Giá: 16,190,000 VND</b></p>
+                        <p class="mota">
+                            iPad Air M3 11 inch sở hữu hiệu suất cực mạnh mẽ với chip Apple M3, kết hợp RAM 8GB, bộ nhớ trong 128GB và tính năng Apple Intelligence đặc biệt. Thiết bị có màn hình Liquid Retina 11 inch hiển thị sắc nét cùng viên pin Li-Po 28,93 watt-giờ giúp duy trì hoạt động lâu dài. Máy cũng thiết kế tinh tế với vỏ nhôm tái chế 100% và trọng lượng chỉ 460g.
+                        </p>
+                        <a href="#">Xem chi tiết</a>
+                        <button class="Btn" onclick="addCart('m3')">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+        </section>
 <!-- Danh sách sản phẩm chia theo phân loại (máy tính, điện thoại, ...)-->
 <!-- Sản phẩm phải có thông tin đi kèm -->
 <!-- Hình ảnh của sản phẩm lưu vào assets/img/sanpham -->
