@@ -24,12 +24,58 @@
                 <li><a href="lienhe.html">Liên hệ</a></li>
             </ul>
         </nav>
+
+    <form class="search-box" method="GET" id="search-form" action="timkiem.html" onsubmit="return mySearch(event);">
+            <input name="search" type="search" id="search" placeholder="Nhập nội dung cần tìm..." />
+            <button type="submit" class="search-icon"><i class="fa fa-search"></i></button>
+            &nbsp;
+    </form>
     <a id="cartBtn" href="giohang.html"><i class="fa fa-shopping-cart"></i>Giỏ hàng</a>
     </header>
-<main>
+<main class="one-col">
+        <!-- Một cột nội dung chính -->
+        <!-- Tùy chọn: hai thẻ aside hai bên chứa hình ảnh quảng cáo, hoặc một banner ngang, nằm giữa header và main-->
+        <div class="cont-col">
+            <section class="main-body">
+                <h2>SẢN PHẨM MỚI RA MẮT</h2>
+                <div class="product-grid" id="newProduct">
+                    <div class="product-item" id="tc">
+                        <img src="./Assets/img/banner/s25doc.jpg" alt="s25ultra">
+                        <a href="sanpham.html">
+                            <h3>Samsung Galaxy S25 Ultra 12GB 256GB</h3>
+                        </a>
+                    </div>
+                    <div class="product-item" id="tc">
+                        <img src="./Assets/img/banner/7p.jpg" alt="7p">
+                        <a href="sanpham.html">
+                            <h3>iPhone 17 Pro 256GB</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>    
+        </div>
+        <div class="cont-col">
+            <section class="main-body">
+                <h2>SẢN PHẨM BÁN CHẠY</h2>
+                <div class="product-grid" id="bestSeller">
+                    <div class="product-item" id="tc">
+                        <img src="./Assets/img/banner/rm13.jpg" alt="n13p">
+                        <a href="sanpham.html">
+                            <h3>Xiaomi Redmi Note 13 Pro 5G 8GB 256GB</h3>
+                        </a>
+                    </div>
+                    <div class="product-item" id="tc">
+                        <img src="./Assets/img/banner/ipad.jpg" alt="m3">
+                        <a href="sanpham.html">
+                            <h3>iPad Air M3 11 inch WiFi 8GB 128GB</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+</main>
 <!-- Một cột nội dung chính -->
 <!-- Tùy chọn: hai thẻ aside hai bên chứa hình ảnh quảng cáo, hoặc một banner ngang, nằm giữa header và main-->
-</main>
 <footer>
     <p>Sản phẩm phục vụ đồ án</p>
     <a id="top" href="#">Về đầu trang</a>
