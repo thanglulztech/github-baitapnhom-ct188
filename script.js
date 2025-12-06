@@ -48,7 +48,7 @@ function getCart() {
 function addCart(id) {
     var cart = getCart();
     if (cart[id]) {
-        cart[id] = parseInt(cart[id]) + 1;
+        cart[id].quantity++;
     } else {
         cart[id] = {
             id: id,
