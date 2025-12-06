@@ -16,7 +16,7 @@ var itemList = {
     "17pro": {
         "name": "iPhone 17 Pro 256GB",
         "price": "37990000",
-        "photo": "./Assets/img/sanpham/17.jpg"
+        "photo": "./Assets/img/sanpham/17p1.jpg"
     },
     "s10fe": {
         "name": "Samsung Galaxy Tab S10 FE Wifi 12GB 256GB",
