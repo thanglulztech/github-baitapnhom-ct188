@@ -16,7 +16,7 @@ var itemList = {
     "17pro": {
         "name": "iPhone 17 Pro 256GB",
         "price": "37990000",
-        "photo": "./Assets/img/sanpham/17p1.jpg"
+        "photo": "./Assets/img/sanpham/17.jpg"
     },
     "s10fe": {
         "name": "Samsung Galaxy Tab S10 FE Wifi 12GB 256GB",
@@ -186,28 +186,8 @@ if (contactForm){
 
 // Gio hang
 
-
-
-
-function createCartData(){
-    localStorage.setItem("sp001", 3)
-    localStorage.setItem("sp002", 5)
-    localStorage.setItem("sp003", 0)
-}
-
-
-
 function displayCart(){
-    var currentCart ={}
-
-    for (item of Object.keys(itemList)){
-        if (localStorage.getItem(item)) {
-            currentCart[item] = itemList[item]
-            currentCart[item].amount = localStorage.getItem(item)
-            currentCart[item].code = item
-        }
-    }
-    
+    var currentCart = getCart()
 
     let priceSum = 0
     for (item in currentCart){
@@ -216,8 +196,8 @@ function displayCart(){
         name.textContent = currentCart[item].name
         
         
-        let amount = document.createElement('td')
-        amount.textContent = currentCart[item].amount
+        let quantity = document.createElement('td')
+        quantity.textContent = currentCart[item].quantity
         
         
         let price = document.createElement('td')
@@ -227,12 +207,12 @@ function displayCart(){
         photo.innerHTML = "<img src='"+ currentCart[item].photo+"'/>"
         
         let total = document.createElement('td')
-        total.innerHTML = currentCart[item].amount * currentCart[item].price
-        priceSum+= (currentCart[item].amount * currentCart[item].price)
+        total.innerHTML = currentCart[item].quantity * currentCart[item].price
+        priceSum+= (currentCart[item].quantity * currentCart[item].price)
         
         let btn = document.createElement('button')
         btn.className='cancelBtn'
-        btn.id = currentCart[item].code
+        btn.id = currentCart[item].id
         btn.innerHTML = "Hủy"
         
         
@@ -240,11 +220,10 @@ function displayCart(){
         btnSlot.appendChild(btn)
 
         let currentRow = document.createElement('tr')
-        currentRow.id = currentCart[item].code
         currentRow.appendChild(name)
         currentRow.appendChild(photo)
         currentRow.appendChild(price)
-        currentRow.appendChild(amount)
+        currentRow.appendChild(quantity)
         currentRow.appendChild(total)
         currentRow.appendChild(btnSlot)
 
@@ -266,8 +245,12 @@ if (cartTable) displayCart()
 const removeBtns = document.getElementsByClassName('cancelBtn')
 for (let btn of removeBtns){
     btn.addEventListener('click',()=> {
-            if (btn.id && localStorage.getItem(btn.id)){
-                localStorage.removeItem(btn.id)
+        const btnID = btn.id
+        const currentCart = getCart()
+        delete currentCart[btnID]
+        
+            if (btnID && currentCart){
+                localStorage.setItem(CART_KEY, JSON.stringify(currentCart))
                 location.reload()
             }
         })
