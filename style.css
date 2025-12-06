@@ -392,6 +392,41 @@ p.intro {
     padding: 12px 24px;
 }
 
+/*trang chu*/
+.header-banner {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#tc {
+    border: 1px solid #ccc; 
+    border-radius: 10px;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.one-col {
+    padding: 20px;
+}
+
+.cont-col{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 60vh;
+    margin-top: 30px;
+}
+
+.main-body {
+    margin-top: 20px;
+}
+
 /* Sản phẩm */
 .product-grid {
     display: grid;
@@ -435,3 +470,14 @@ p.intro {
     margin: 15px 0;
 }
 
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
