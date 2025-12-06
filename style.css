@@ -234,6 +234,11 @@ p.intro {
     cursor: pointer;
 }
 
+#cartSum > *{
+    font-size: 36px;
+    font-weight: 500;
+}
+
 
 /*Form đăng ký và đăng nhập*/
 .secForm{
